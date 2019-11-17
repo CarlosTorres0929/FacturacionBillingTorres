@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Carlos Torres
  */
+@Service
 public class BillStatesServiceRepoImplements implements BillStatesService{
      @Autowired
     private BillStatesServiceRepositorio repositorio;
