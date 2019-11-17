@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Tipos de Usuarios</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Id </th>
+              <th>Tipo</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user_type of user_type" class="text-center">
+              <td>{{user_type.id}}</td>
+              <td>{{user_type.type}}</td>
+              <td>{{user_type.state}}</td>
+              <td>
+                <button (click)="Editar(user_type)" class="btn btn-warning">Editar</button>
+                <button (click)="Delete(user_type)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

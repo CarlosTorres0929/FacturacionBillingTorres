@@ -1,0 +1,75 @@
+
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Editar Usuario</h3>
+      </div>
+      <div class="card-body">
+     
+        <form action="Editar" method="POST">
+          <div class="form-group">
+           
+            <label for="">Id Usuario</label>
+            <input [(ngModel)]="user.id" name="id" type="number" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Numero de documento</label>
+            <input [(ngModel)]="user.document_number" name="document_number" type="number" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Nombres</label>
+            <input [(ngModel)]="user.name" name="name" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Apellidos</label>
+            <input [(ngModel)]="user.last_name" name="last_name" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Fecha de Nacimiento</label>
+            <input [(ngModel)]="user.date_birth" name="date_birth" type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Correo Electronico</label>
+            <input [(ngModel)]="user.email" name="email" type="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Clave</label>
+            <input [(ngModel)]="user.password" name="password" type="password" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Direccion</label>
+            <input [(ngModel)]="user.address" name="address" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Telefono</label>
+            <input [(ngModel)]="user.phone" name="phone" type="number" class="form-control">
+          </div>
+          <label for="user_type_id"> Tipo de Usuario: </label><br>
+          <select name="user_type_id" ng-model="user.user_type_id">
+            <option value="option-1">Cliente</option>
+            <option value="option-2">Vendedor</option>
+            <option value="option-2">Administrador</option>
+          </select><br>
+          
+          <label for="city_id"> Id de la ciudad: </label><br>
+          <select name="city_id" ng-model="user.city_id">
+            <option value="option-1">Medellin</option>
+            <option value="option-2">Cali</option>
+            <option value="option-2">Bogota</option>
+          </select><br>
+
+          
+          <label for="country_id"> Id del Pais: </label><br>
+          <select name="country_id" ng-model="user.country_id">
+            <option value="option-1">Colombia</option>
+            <option value="option-2">Brazil</option>
+            <option value="option-2">Panama</option>
+          </select><br>
+          <button (click)="Actualizar(user)" class="btn btn-success">Actualizar</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
+
