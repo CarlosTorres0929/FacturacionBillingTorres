@@ -10,6 +10,15 @@ import { EditComponent } from './user/edit/edit.componentuser';
 import { ListarComponenttypeuser } from './user_type/listar/listar.componentusertype';
 import { AddComponenttypeuser } from './user_type/add/add.componentusertype';
 import { EditComponentusertype } from './user_type/edit/edit.componentusertype';
+import { ListarComponentcountries } from './countries/listar/listar.componentcountries';
+import { AddComponentcountries } from './countries/add/add.componentcountries';
+import { EditComponentcountries } from './countries/edit/edit.componentcountries';
+import { ListarComponentcities } from './cities/listar/listar.componentcities';
+import { AddComponentcities } from './cities/add/add.componentcities';
+import { EditComponentcities } from './cities/edit/edit.componentcities';
+import { ListarComponentbill_states } from './bill_states/listar/listar.componentbill_states';
+import { AddComponentbill_states } from './bill_states/add/add.componentbill_states';
+import { EditComponentbill_states } from './bill_states/edit/edit.componentbill_states';
 
 @NgModule({
   declarations: [
@@ -19,7 +28,16 @@ import { EditComponentusertype } from './user_type/edit/edit.componentusertype';
     EditComponent,
     ListarComponenttypeuser,
     AddComponenttypeuser,
-    EditComponentusertype
+    EditComponentusertype,
+    ListarComponentcountries,
+    AddComponentcountries,
+    EditComponentcountries,
+    ListarComponentcities,
+    AddComponentcities,
+    EditComponentcities,
+    ListarComponentbill_states,
+    AddComponentbill_states,
+    EditComponentbill_states
   ],
   imports: [
     BrowserModule,

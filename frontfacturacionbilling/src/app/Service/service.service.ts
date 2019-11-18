@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { user } from '../Modelo/user';
 import { user_type } from '../Modelo/user_type'
+import { countries } from '../Modelo/countries';
+import { cities } from '../Modelo/cities';
+import { bill_states } from '../Modelo/bill_states';
 // @Injectable({
 //   providedIn: 'root'
 // })
@@ -33,7 +36,7 @@ export class ServiceService {
   deleteUser(User:user){
     return this.http.delete<user>(this.Url+"/"+User.id);
   }
-// Luego ir al archivo listar.component.ts para crear el metod Editar() que se invoca en el formulario del archivo listar.component.html
+
 
 // Metodos para la tabla user_type
  //Metodo para listar los tipos de usuarios desde el project back
@@ -56,6 +59,72 @@ updateusertype(Usertype:user_type){
 deleteUsertype(Usertype:user_type){
   return this.http.delete<user_type>(this.Url+"/"+Usertype.id);
 }
-// Luego ir al archivo listar.component.ts para crear el metod Editar() que se invoca en el formulario del archivo listar.component.html
+
+// Metodos para la tabla countries
+  //Metodo para listar los paises desde el project back
+  getCountries(){
+    return this.http.get<countries[]>(this.Url);
+  }
+  //Metodo para guardar los registros
+  createCountries(Countries:countries){
+    return this.http.post<countries>(this.Url,Countries);
+  }
+  // Este metodo toma el id que se requiere actualizar los paises
+  getCountriesId(id:number){
+    return this.http.get<countries>(this.Url+"/"+id);
+  }
+  // estes es el metodo para actualizar los paises
+  updatecountries(Countries:countries){
+    return this.http.put<countries>(this.Url+"/"+Countries.id,Countries);
+  }
+  //Metodo para eliminar paises
+  deleteCountries(Countries:countries){
+    return this.http.delete<countries>(this.Url+"/"+Countries.id);
+  }
+
+  // Metodos para la tabla ciudades
+  //Metodo para listar las ciudades desde el project back
+  getCities(){
+    return this.http.get<cities[]>(this.Url);
+  }
+  //Metodo para guardar los registros
+  createCities(Cities:cities){
+    return this.http.post<cities>(this.Url,Cities);
+  }
+  // Este metodo toma el id que se requiere actualizar las ciudades
+  getCitiesId(id:number){
+    return this.http.get<cities>(this.Url+"/"+id);
+  }
+  // estes es el metodo para actualizar las ciudades
+  updateCities(Cities:cities){
+    return this.http.put<cities>(this.Url+"/"+Cities.id,Cities);
+  }
+  //Metodo para eliminar ciudades
+  deleteCities(Cities:cities){
+    return this.http.delete<cities>(this.Url+"/"+Cities.id);
+  }
+
+  // Metodos para la tabla estados de cuenta
+  //Metodo para listar los estados de cuenta desde el project back
+  getBillstates(){
+    return this.http.get<bill_states[]>(this.Url);
+  }
+  //Metodo para guardar los registros
+  createBillstates(BillStates:bill_states){
+    return this.http.post<bill_states>(this.Url,BillStates);
+  }
+  // Este metodo toma el id que se requiere actualizar los Usuarios
+  getBillstatesId(id:number){
+    return this.http.get<bill_states>(this.Url+"/"+id);
+  }
+  // estes es el metodo para actualizar los usuarios
+  updateBillstates(BillStates:bill_states){
+    return this.http.put<bill_states>(this.Url+"/"+BillStates.id,BillStates);
+  }
+  //Metodo para eliminar usuarios
+  deleteBillstates(BillStates:bill_states){
+    return this.http.delete<bill_states>(this.Url+"/"+BillStates.id);
+  }
+
 
 }

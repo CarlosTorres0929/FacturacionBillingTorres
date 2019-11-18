@@ -1,0 +1,33 @@
+
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Agregar Estado de cuenta</h3>
+      </div>
+      <div class="card-body">
+   
+        <form action="Guardar" method="POST">
+          <div class="form-group">
+  
+            <label for="">Id Estado de cuenta</label>
+            <input [(ngModel)]="bill_states.id" name="id" type="number" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Tipo</label>
+            <input [(ngModel)]="bill_states.type" name="type" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">activo</label>
+            <input [(ngModel)]="bill_states.active" name="active" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Envio</label>
+            <input [(ngModel)]="bill_states.dispatch" name="dispatch" type="text" class="form-control">
+          </div>
+          <button (click)="Guardar(bill_states)" class="btn btn-success">Guardar</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
