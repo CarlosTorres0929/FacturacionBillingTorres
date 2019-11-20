@@ -26,6 +26,16 @@ import { Router } from '@angular/router';
   templateUrl: './app.componentbill_states.html',
   styleUrls: ['./app.componentbill_states.css']
 })
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.componentbill.html',
+  styleUrls: ['./app.componentbill.css']
+})
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.componentorders.html',
+  styleUrls: ['./app.componentorders.css']
+})
 export class AppComponent {
   title = 'frontfacturacionbilling';
 

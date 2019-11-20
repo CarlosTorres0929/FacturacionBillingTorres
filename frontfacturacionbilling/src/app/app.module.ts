@@ -19,7 +19,12 @@ import { EditComponentcities } from './cities/edit/edit.componentcities';
 import { ListarComponentbill_states } from './bill_states/listar/listar.componentbill_states';
 import { AddComponentbill_states } from './bill_states/add/add.componentbill_states';
 import { EditComponentbill_states } from './bill_states/edit/edit.componentbill_states';
-
+import { ListarComponentbill } from './bill/listar/listar.componentbill';
+import { AddComponentbill } from './bill/add/add.componentbill';
+import { EditComponentbill } from './bill/edit/edit.componentbill';
+import { ListarComponentorders } from './orders/listar/listar.componentorders';
+import { AddComponentorders } from './orders/add/add.componentorders';
+import { EditComponentorders } from './orders/edit/edit.componentorders';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,13 @@ import { EditComponentbill_states } from './bill_states/edit/edit.componentbill_
     EditComponentcities,
     ListarComponentbill_states,
     AddComponentbill_states,
-    EditComponentbill_states
+    EditComponentbill_states,
+    ListarComponentbill,
+    AddComponentbill,
+    EditComponentbill,
+    ListarComponentorders,
+    AddComponentorders,
+    EditComponentorders
   ],
   imports: [
     BrowserModule,

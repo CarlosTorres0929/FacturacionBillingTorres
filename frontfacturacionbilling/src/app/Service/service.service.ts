@@ -5,6 +5,8 @@ import { user_type } from '../Modelo/user_type'
 import { countries } from '../Modelo/countries';
 import { cities } from '../Modelo/cities';
 import { bill_states } from '../Modelo/bill_states';
+import { bill } from '../Modelo/bill';
+import { orders } from '../Modelo/orders';
 // @Injectable({
 //   providedIn: 'root'
 // })
@@ -126,5 +128,48 @@ deleteUsertype(Usertype:user_type){
     return this.http.delete<bill_states>(this.Url+"/"+BillStates.id);
   }
 
+// Metodos para la tabla cuenta
+  //Metodo para listar cuenta desde el project back
+  getBill(){
+    return this.http.get<bill[]>(this.Url);
+  }
+  //Metodo para guardar los registros
+  createBill(Bill:bill){
+    return this.http.post<bill>(this.Url,Bill);
+  }
+  // Este metodo toma el id que se requiere actualizar las cuentas
+  getBillId(id:number){
+    return this.http.get<bill>(this.Url+"/"+id);
+  }
+  // estes es el metodo para actualizar las cuentas
+  updateBill(Bill:bill){
+    return this.http.put<bill>(this.Url+"/"+Bill.id,Bill);
+  }
+  //Metodo para eliminar cuentas
+  deleteBill(Bill:bill){
+    return this.http.delete<bill>(this.Url+"/"+Bill.id);
+  }
+
+// Metodos para la tabla pedidos
+  //Metodo para listar el pedido desde el project back
+  getOrders(){
+    return this.http.get<orders[]>(this.Url);
+  }
+  //Metodo para guardar los registros
+  createOrders(Orders:orders){
+    return this.http.post<orders>(this.Url,Orders);
+  }
+  // Este metodo toma el id que se requiere actualizar los pedidos
+  getOrdersId(id:number){
+    return this.http.get<orders>(this.Url+"/"+id);
+  }
+  // estes es el metodo para actualizar las cuentas
+  updateOrders(Orders:orders){
+    return this.http.put<orders>(this.Url+"/"+Orders.id,Orders);
+  }
+  //Metodo para eliminar cuentas
+  deleteOrders(Orders:orders){
+    return this.http.delete<orders>(this.Url+"/"+Orders.id);
+  }
 
 }

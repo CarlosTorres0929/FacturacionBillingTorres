@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditComponentbill_states } from './edit.componentbill_states';
+import { AddComponentorders} from './add.componentorders';
 
-describe('EditComponentbill_states', () => {
-  let component: EditComponentbill_states;
-  let fixture: ComponentFixture<EditComponentbill_states>;
+describe('AddComponentorders', () => {
+  let component: AddComponentorders;
+  let fixture: ComponentFixture<AddComponentorders>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditComponentbill_states ]
+      declarations: [ AddComponentorders ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditComponentbill_states);
+    fixture = TestBed.createComponent(AddComponentorders);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
